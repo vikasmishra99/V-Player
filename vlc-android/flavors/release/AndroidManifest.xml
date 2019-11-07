@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="videoplayer.hdvideoplayer.xvideoplayer.mp3musicplayer.fullhdvideoplayer">
+
+    <uses-permission android:name="android.permission.READ_LOGS" tools:node="remove" />
+
+    <!-- Extensions API permissions -->
+    <permission
+        android:name="videoplayer.hdvideoplayer.xvideoplayer.mp3musicplayer.fullhdvideoplayer.permission.READ_EXTENSION_DATA"
+        android:protectionLevel="normal" />
+
+    <permission
+        android:name="videoplayer.hdvideoplayer.xvideoplayer.mp3musicplayer.fullhdvideoplayer.permission.BIND_DATA_CONSUMER"
+        android:protectionLevel="normal" />
+
+    <uses-permission android:name="videoplayer.hdvideoplayer.xvideoplayer.mp3musicplayer.fullhdvideoplayer.permission.READ_EXTENSION_DATA" />
+    <uses-permission android:name="videoplayer.hdvideoplayer.xvideoplayer.mp3musicplayer.fullhdvideoplayer.permission.BIND_DATA_CONSUMER" />
+
+    <application>
+        <activity android:name="videoplayer.hdvideoplayer.xvideoplayer.mp3musicplayer.fullhdvideoplayer.gui.DebugLogActivity"
+            android:theme="@style/Theme.VLC"
+            android:launchMode="singleTop" />
+        <service android:name="videoplayer.hdvideoplayer.xvideoplayer.mp3musicplayer.fullhdvideoplayer.DebugLogService"
+            android:process=":logger" />
+    </application>
+
+</manifest>
